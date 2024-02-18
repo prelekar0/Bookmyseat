@@ -103,7 +103,7 @@ const AddShow = () => {
                 }
                 <div className={styles.add_simple}>
                     <div className={styles.add_main}>
-                        <label htmlFor="movie" className={styles.add_label}>movie</label>
+                        <label htmlFor="movie" className={styles.add_label}>event</label>
                         <select className={styles.add_input} value={show.movie} onChange={handleChangeCategoryMovie} id="movie">
                             <option value=""></option>
                             {
@@ -114,7 +114,7 @@ const AddShow = () => {
                         </select>
                     </div>
                     <div className={styles.add_main}>
-                        <label htmlFor="cinema" className={styles.add_label}>cinema</label>
+                        <label htmlFor="cinema" className={styles.add_label}>Venue</label>
                         <select className={styles.add_input} value={show.cinema} onChange={handleChangeCategoryCinema} id="cinema">
                             <option value=""></option>
                             {

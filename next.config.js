@@ -3,12 +3,23 @@ module.exports = {
     outputStandalone: true,
     env: {
       "BASE_URL": "http://localhost:3000",
-      "apiKey": "AIzaSyBjKtZrZ_nkLkGc7goLbLX8HHQ_WlYon5s",
-      "authDomain": "bookmyseat-75b13.firebaseapp.com",
-      "projectId": "bookmyseat-75b13",
-      "storageBucket": "bookmyseat-75b13.appspot.com",
-      "messagingSenderId": "869849498277",
-      "appId": "1:869849498277:web:07a38dd60525b8a88f434c"
+      "apiKey": "AIzaSyALwsct-xekszGeYBvD39gIu591WvEUwj4",
+      "authDomain": "bookmyseat-c872b.firebaseapp.com",
+      "projectId": "bookmyseat-c872b",
+      "storageBucket": "bookmyseat-c872b.appspot.com",
+      "messagingSenderId": "955762662013",
+      "appId": "1:955762662013:web:7978be94b7ad9ff6b9ef14"
     }
+
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyALwsct-xekszGeYBvD39gIu591WvEUwj4",
+//   authDomain: "bookmyseat-c872b.firebaseapp.com",
+//   projectId: "bookmyseat-c872b",
+//   storageBucket: "bookmyseat-c872b.appspot.com",
+//   messagingSenderId: "955762662013",
+//   appId: "1:955762662013:web:7978be94b7ad9ff6b9ef14",
+//   measurementId: "G-90T1LQQPZ9"
+// };
   },
 }

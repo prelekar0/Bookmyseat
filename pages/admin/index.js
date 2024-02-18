@@ -66,7 +66,7 @@ const ShowMovies = () => {
                 loading && <Loading />
             }
             <div className={styles.cont_add}>
-                <Link href="/admin/addmovies"><a className={styles.add}>Add Movie</a></Link>
+                <Link href="/admin/addmovies"><a className={styles.add}>Add Event</a></Link>
                 <form className={styles.search_cont} onSubmit={e => {handleSearch(e)}}>
                     <input className={styles.search} name="search" id="search" onChange={e => {setSearch(e.target.value)}} />
                     <button className={styles.btn_search}>
@@ -76,7 +76,7 @@ const ShowMovies = () => {
             </div>
             {
                 movies.length === 0
-                ? <h1>No Movies</h1>
+                ? <h1>No Event</h1>
                 : <div className={styles.movies}> 
                     {
                     movies.map((movie, index) => (

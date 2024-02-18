@@ -9,7 +9,7 @@ import styles from "../styles/home.module.scss";
 const ShowMovies = () => {
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false)
-
+    let im="/Users/patu/Desktop/Next2/Bookmyseat/public/profilebg.jpg";
     useEffect(async () => {
         try {
             setLoading(true)
@@ -17,8 +17,9 @@ const ShowMovies = () => {
             const res = await getDocs(q)
             
             let d = []
-            res.forEach((data) =>{
-                d.push({...data.data(), uid: data.id})
+            res.forEach((doc) =>{
+                d.push({...doc.data(), uid: doc.id})
+                console.log(doc.data())
             })
             setMovies(d)
             setLoading(false)
@@ -27,7 +28,7 @@ const ShowMovies = () => {
             return toast.error(error.message)
         }
     }, [])
-
+    ///
     return(
         <div className={styles.conatiner}>
             {
@@ -35,14 +36,14 @@ const ShowMovies = () => {
             }
             {
                 movies.length === 0
-                ? <h1>No Movies</h1>
+                ? <h1>No events</h1>
                 : <div className={styles.movies}>
                     {
                         movies.map((movie, index) => (
                             <div key={index} className={styles.movie}>
                                 <Link href={`/movies/${movie.uid}`}><a>
                                 <div className={styles.poster}>
-                                    <img src={movie.poster[0]} alt="poster" className={styles.pos}/>
+                                    <img src="{movie.poster[0]}" alt="poster" className={styles.pos}/>
                                 </div>
                                 <div className={styles.details}>
                                     <h1 id="name" name="name" className={styles.item}>{movie.name}</h1>
@@ -63,7 +64,25 @@ const ShowMovies = () => {
                     }
                 </div>
             }
-        </div>
+
+
+        
+  <div class="card-body">
+  
+  <div class="card-header">
+    <div className="logo">
+  <img src="pillai logo.jpeg" name="img"></img></div>
+    Pillai HOCL Educational Campus, Rasayani, Taluka Khalapur, Dist. Raigad-410207 MAH, India
+  </div>
+    <h5 class="card-title">Pillai Eventize</h5>
+    <p class="card-text">Contact us on.</p>
+    <p>02192-669004/669005</p>
+    <a href="https://phcet.ac.in/" class="btn btn-primary">PHCET</a>
+  </div>
+</div>
+
+        
+        
     )
 }
 

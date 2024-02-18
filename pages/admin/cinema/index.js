@@ -74,7 +74,7 @@ const Cinemas = () => {
                 loading && <Loading />
             }
             <div className={styles.cont_add}>
-                <Link href="/admin/cinema/addcinema"><a className={styles.add}>Add Cinema</a></Link>
+                <Link href="/admin/cinema/addcinema"><a className={styles.add}>Add Venue</a></Link>
                 <form className={styles.search_cont} onSubmit={e => {handleSearch(e)}}>
                     <input className={styles.search} name="search" id="search" onChange={e => {setSearch(e.target.value)}} />
                     <button className={styles.btn_search}>
@@ -85,7 +85,7 @@ const Cinemas = () => {
             <div className={styles.details}>
                 {
                     cinemas.length === 0
-                    ? <h1>No Cinema</h1>
+                    ? <h1>No Event</h1>
                     : <div className={styles.table}>
                         <div className={styles.header}>
                             <h1 className={styles.label1}>Name</h1>

@@ -24,7 +24,15 @@ const UpdateShow = (props) => {
     const [loading, setLoading] = useState(false)
 
     const auth = getAuth()
-
+  onAuthStateChanged(auth, async (u) => {
+                if(u){
+                const us = await getDoc(doc(db, 'users', `${u.uid}`))
+                const data = us.data()
+                const last = Router.pathname.split("/")
+                if(data.role == "user" && last[1] == "admin")
+                    Router.push("/");
+                }
+            })
     useEffect(() => {
         try {
             onAuthStateChanged(auth, async (u) => {
@@ -105,7 +113,7 @@ const UpdateShow = (props) => {
                 }
                 <div className={styles.add_simple}>
                     <div className={styles.add_main}>
-                        <label htmlFor="movie" className={styles.add_label}>movie</label>
+                        <label htmlFor="movie" className={styles.add_label}>Event</label>
                         <select className={styles.add_input} value={show.movie} onChange={handleChangeCategoryMovie} id="movie">
                             <option value=""></option>
                             {
@@ -116,7 +124,8 @@ const UpdateShow = (props) => {
                         </select>
                     </div>
                     <div className={styles.add_main}>
-                        <label htmlFor="cinema" className={styles.add_label}>cinema</label>
+                        <label html 
+                        For="cinema" className={styles.add_label}>Venue</label>
                         <select className={styles.add_input} value={show.cinema} onChange={handleChangeCategoryCinema} id="cinema">
                             <option value=""></option>
                             {

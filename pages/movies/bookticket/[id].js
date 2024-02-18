@@ -37,8 +37,8 @@ const BookTicket = (props) => {
     
             const res_cinema = await getDocs(collection(db, "cinemas"))
             let d = []
-            res_cinema.forEach((data) =>{
-                d.push({...data.data(), uid: data.id})
+            res_cinema.forEach((doc) =>{
+                d.push({...doc.data(), uid: doc.id})
             })
             setCinemas(d)
             setLoading(false)
@@ -135,7 +135,7 @@ const BookTicket = (props) => {
             <h1 className={styles.book_title}>Book Ticket</h1>
             <div className={styles.add_simple}>
                 <div className={styles.add_main}>
-                    <label className={styles.add_label} htmlFor="cinema">cinema</label>
+                    <label className={styles.add_label} htmlFor="cinema">Venue</label>
                     <select className={styles.add_input} value={ticket.cinema} onChange={handleChangeCinema} id="cinema">
                         <option value=""></option>
                         {

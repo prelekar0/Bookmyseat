@@ -74,8 +74,8 @@ const Cinemas = () => {
                 ? <h1>No Shows</h1>
                 : <div className={styles.table}>
                     <div className={styles.header}>
-                        <h1 className={styles.label1}>movie</h1>
-                        <h1 className={styles.label1}>cinema</h1>
+                        <h1 className={styles.label1}>event</h1>
+                        <h1 className={styles.label1}>Venue</h1>
                         <h1 className={styles.label1}>totalseat</h1>
                         <h1 className={styles.label1}>startAt</h1>
                         <h1 className={styles.label1}>startDate</h1>

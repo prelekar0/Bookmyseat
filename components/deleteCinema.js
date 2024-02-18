@@ -29,7 +29,7 @@ const DeteleCinema = ({ setRemoveCinema, id }) => {
                 loading && <Loading />
             }
             <div className={styles.del_form}>
-                <h1 className={styles.del_title}>Are you sure you want to Delete this Cinema?</h1>
+                <h1 className={styles.del_title}>Are you sure you want to Delete this Venue?</h1>
                 <div className={styles.del_buttons}>
                     <button className={styles.del_del} onClick={handleDelete}>Delete</button>
                     <button className={styles.del_can} onClick={() => setRemoveCinema(false)}>Cancel</button>

@@ -59,8 +59,8 @@ const Navbar = () => {
                     {
                         user.role == "admin" && 
                         <ul className={styles.adminul}>
-                            <li className={styles.adminli}><Link href="/admin"><a>Movies</a></Link></li>
-                            <li className={styles.adminli}><Link href="/admin/cinema"><a>Cinemas</a></Link></li>
+                            <li className={styles.adminli}><Link href="/admin"><a>Events</a></Link></li>
+                            <li className={styles.adminli}><Link href="/admin/cinema"><a>Venue</a></Link></li>
                             <li className={styles.adminli}><Link href="/admin/showtime"><a>ShowTime</a></Link></li>
                         </ul>
                     }

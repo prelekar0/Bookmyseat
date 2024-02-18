@@ -182,8 +182,8 @@ const AddMovies = () => {
                 <small className={styles.add_small}>Separate keywords with enter key</small>
                 <div className={styles.add_tag}>
                     <div className={styles.add_main}>
-                        <label htmlFor="tag" className={styles.add_label}>tag</label>
-                        <input className={styles.add_input} type="text" id="tag" placeholder="tag" name="tag" onKeyUp={e => (e.key == "Enter" ? addTag(e): null)}/>
+                        <label htmlFor="tag" className={styles.add_label}>Goals</label>
+                        <input className={styles.add_input} type="text" id="tag" placeholder="goals" name="tag" onKeyUp={e => (e.key == "Enter" ? addTag(e): null)}/>
                         <ul className={styles.add_ul}>
                         { 
                             movie.tag.map((tag, index) => (
@@ -198,8 +198,8 @@ const AddMovies = () => {
                         </ul>
                     </div>
                     <div className={styles.add_main}>
-                        <label htmlFor="director" className={styles.add_label}>director</label>
-                        <input className={styles.add_input} type="text" id="director" placeholder="director" name="director" onKeyUp={e => (e.key == "Enter" ? addDirector(e): null)} />
+                        <label htmlFor="director" className={styles.add_label}>Speaker</label>
+                        <input className={styles.add_input} type="text" id="director" placeholder="speaker" name="director" onKeyUp={e => (e.key == "Enter" ? addDirector(e): null)} />
                         <ul className={styles.add_ul}>
                             {
                                 movie.director.map((director, index) => (
@@ -214,8 +214,8 @@ const AddMovies = () => {
                         </ul>
                     </div>
                     <div className={styles.add_main}>
-                        <label htmlFor="writers" className={styles.add_label}>writers</label>
-                        <input className={styles.add_input} type="text" id="writers" placeholder="writers" name="writers" onKeyUp={e => (e.key == "Enter" ? addWriters(e): null)} />
+                        <label htmlFor="writers" className={styles.add_label}>faculty co-ordinator</label>
+                        <input className={styles.add_input} type="text" id="writers" placeholder="faculty co-ordinator" name="writers" onKeyUp={e => (e.key == "Enter" ? addWriters(e): null)} />
                         <ul className={styles.add_ul}>
                             {
                                 movie.writers.map((writers, index) => (
@@ -230,8 +230,8 @@ const AddMovies = () => {
                         </ul>
                     </div>
                     <div className={styles.add_main}>
-                        <label htmlFor="stars" className={styles.add_label}>stars</label>
-                        <input className={styles.add_input} type="text" id="stars" placeholder="stars" name="stars" onKeyUp={e => (e.key == "Enter" ? addStars(e): null)}/>
+                        <label htmlFor="stars" className={styles.add_label}>Outcomes</label>
+                        <input className={styles.add_input} type="text" id="stars" placeholder="outcomes" name="stars" onKeyUp={e => (e.key == "Enter" ? addStars(e): null)}/>
                         <ul className={styles.add_ul}>
                             {
                                 movie.stars.map((stars, index) => (
